@@ -10,11 +10,8 @@ const XDictionary = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [definition, setDefinition] = useState(null);
 
+  
   const handleSearch = () => {
-    if (!searchTerm.trim()) {
-      setDefinition("");
-      return;
-    }
     const foundWord = dictionary.find(
       (entry) => entry.word.toLowerCase() === searchTerm.toLowerCase()
     );
